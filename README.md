@@ -1,7 +1,7 @@
 ## Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Theme Semantic UI
+## Theme Semantic-UI
 https://react.semantic-ui.com/
 
 In the project directory, you can run:
