@@ -1,12 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import 'semantic-ui-css/semantic.min.css';
 import * as serviceWorker from './serviceWorker';
+import NotificationBar from './components/NotificationBar';
+import { Grid } from 'semantic-ui-react';
+import MenuHome from './components/MenuHome';
+import ContentHome from './components/ContentHome';
+import ContentBottom from './components/ContentBottom';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+      <NotificationBar />
+      <Grid columns={2} stackable stretched={true} style={{height: "100%"}}>
+        <Grid.Column width={3}>
+          <MenuHome />
+        </Grid.Column>
+        <Grid.Column width={13}>
+          <ContentHome />
+        </Grid.Column>
+      </Grid>
+      <ContentBottom />
   </React.StrictMode>,
   document.getElementById('root')
 );
