@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Menu } from "semantic-ui-react";
 
 export default class NotificationBar extends Component {
-  state = {};
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  state = {activeItem:'option1'};
+
+  handleItemClick = (e , { name }) => { this.setState({ activeItem: name}); };
+  // handleItemClick = (e, { name }) => this.setState({ activeItem: name });
 
   render() {
     const { activeItem } = this.state;
