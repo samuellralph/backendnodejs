@@ -1,26 +1,19 @@
-import React, { Component } from 'react';
-import NotificationBar from '../../components/NotificationBar';
+import React from 'react';
 import { Grid } from 'semantic-ui-react';
 import MenuHome from '../../components/MenuHome';
 import ContentHome from '../../components/ContentHome';
-import ContentBottom from '../../components/ContentBottom';
 
-
-export default class home extends Component {
-    render() {
+export default function home () {
         return (
             <>
-                <NotificationBar />
-                <Grid columns={2} padded={ "vertically"} stackable stretched={true} style={{height: "100%"}} >
-                <Grid.Column width={3}>
+                <Grid columns={2} padded={ "vertically"} style={{height: "100%"}} >
+                <Grid.Column width={4} color='red' >
                     <MenuHome />
                 </Grid.Column>
-                <Grid.Column width={13}>
+                <Grid.Column width={13} color='olive'>
                     <ContentHome />
                 </Grid.Column>
                 </Grid>
-                <ContentBottom />
             </>
-        )
-    }
-}
+        );
+};
