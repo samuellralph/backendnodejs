@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { Menu } from "semantic-ui-react";
+import { Menu, Input, Button } from "semantic-ui-react";
 
 export default class NotificationBar extends Component {
-  state = {activeItem:'option1'};
+  state = {activeItem:''};
 
   handleItemClick = (e , { name }) => { this.setState({ activeItem: name}); };
   // handleItemClick = (e, { name }) => this.setState({ activeItem: name });
@@ -11,38 +11,17 @@ export default class NotificationBar extends Component {
     const { activeItem } = this.state;
 
     return (
-      <Menu>
-        <Menu.Item
-          name="option1"
-          active={activeItem==="option1"}
-          onClick={this.handleItemClick}
-        >
-          Option 1
-        </Menu.Item>
-
-        <Menu.Item
-          name="option2"
-          active={activeItem==="option2"}
-          onClick={this.handleItemClick}
-        >
-          Option 2
-        </Menu.Item>
-
-        <Menu.Menu position={"right"}>
-          <Menu.Item
-            name="option3"
-            active={activeItem==="option3"}
-            onClick={this.handleItemClick}
-          >
-            Option 3
+      <Menu inverted>
+         <Menu.Menu position={"right"}>
+          <Menu.Item>
+            <Input className="icon" icon="search" placeholder="Pesquisa..." />
+          </Menu.Item>
+          <Menu.Item>
+            <Button primary>Sign up</Button>
           </Menu.Item>
 
-          <Menu.Item
-            name="option4"
-            active={activeItem==="option4"}
-            onClick={this.handleItemClick}
-          >
-            Option 4
+          <Menu.Item>
+            <Button>Log-in</Button>
           </Menu.Item>
         </Menu.Menu>
       </Menu>
