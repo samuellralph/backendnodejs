@@ -15,7 +15,7 @@ export default class MenuHome extends Component {
     return (
       <Menu pointing secondary vertical>
         <Menu.Item>
-          <Menu.Header>Mangas</Menu.Header>
+          
           <Menu.Item
             name="Lançamentos"
             active={activeItemManga === "Lançamentos"}
@@ -28,7 +28,7 @@ export default class MenuHome extends Component {
           />
         </Menu.Item>
         <Menu.Item>
-          <Menu.Header>Animes</Menu.Header>
+          
           <Menu.Item
             name="Lançamentos"
             active={activeItemAnime === "Lançamentos"}
