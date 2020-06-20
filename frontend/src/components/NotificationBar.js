@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Menu, Input, Button } from "semantic-ui-react";
+import { Menu, Button } from "semantic-ui-react";
 
 export default class NotificationBar extends Component {
   state = {activeItem:''};
@@ -12,18 +12,15 @@ export default class NotificationBar extends Component {
 
     return (
       <Menu inverted>
-         <Menu.Menu position={"right"}>
-          <Menu.Item>
-            <Input className="icon" icon="search" placeholder="Pesquisa..." />
-          </Menu.Item>
+        <Menu.Menu position={"right"}>
           <Menu.Item>
             <Button primary>Sign up</Button>
           </Menu.Item>
-
           <Menu.Item>
             <Button>Log-in</Button>
           </Menu.Item>
         </Menu.Menu>
+
       </Menu>
     );
   }
